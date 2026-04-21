@@ -17,6 +17,8 @@ export default defineConfig([
     'out/**',
     'build/**',
     'next-env.d.ts',
+    'coverage/**',
+    'package-lock.json',
   ]),
   {
     files: ['.lintstagedrc.js', '.eslintrc.js', '*.config.js'],
@@ -58,6 +60,6 @@ export default defineConfig([
     files: ['**/*.css'],
     plugins: { css },
     language: 'css/css',
-    rules: { ...css.configs.recommended.rules }
+    rules: { ...css.configs.recommended.rules, 'css/no-invalid-at-rules': 'off' }
   }
 ])
