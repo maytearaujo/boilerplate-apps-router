@@ -53,9 +53,9 @@
   },
   "lint-staged": {
     "**/*.{ts,js,tsx,jsx,css,md}": [
-      "npm run prettier --write",
-      "npm run eslint --cache --fix",
-      "npm run test -- --findReleatedTests"
+      "prettier --write",
+      "eslint --cache --fix",
+      "jest --findRelatedTests"
     ]
   }
 }
