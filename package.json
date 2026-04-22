@@ -15,7 +15,8 @@
   "dependencies": {
     "next": "16.2.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "styled-components": "^6.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
@@ -27,7 +28,6 @@
     "@eslint/js": "^9.39.4",
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
-    "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -47,7 +47,6 @@
     "jest-environment-jsdom": "^30.3.0",
     "lint-staged": "^16.4.0",
     "prettier": "3.8.3",
-    "tailwindcss": "^4",
     "typescript": "^5",
     "typescript-eslint": "^8.58.2"
   },
@@ -55,7 +54,7 @@
     "**/*.{ts,js,tsx,jsx,css,md}": [
       "prettier --write",
       "eslint --cache --fix",
-      "jest --findRelatedTests"
+      "jest --findReletedTests"
     ]
   }
 }
