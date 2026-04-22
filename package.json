@@ -52,7 +52,10 @@
     "typescript-eslint": "^8.58.2"
   },
   "lint-staged": {
-    "*.{ts,js,css,md}": "prettier --write",
-    "*.{ts,js}": "eslint --cache --fix"
+    "*.{ts,js,css,md}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "test -- --findReleatedTests"
+    ]
   }
 }
