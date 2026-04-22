@@ -54,7 +54,7 @@
     "**/*.{ts,js,tsx,jsx,css,md}": [
       "prettier --write",
       "eslint --cache --fix",
-      "jest --findReletedTests"
+      "jest --findRelatedTests"
     ]
   }
 }
