@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
 
-const Main = () =>{ 
-return (
+const Main = () => {
+  return (
     <div>
-        <h1>React Avançado</h1>
+      <h1>React Avançado</h1>
     </div>
-    )
+  )
 }
 
-export default Main;
+export default Main
+// test comment
