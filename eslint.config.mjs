@@ -23,7 +23,7 @@ globalIgnores([
 ]), {
   files: ['.lintstagedrc.js', '.eslintrc.js', '*.config.js'],
   languageOptions: { globals: globals.node },
-  rules: { 'no-undef': 'off' }
+  rules: { 'no-undef': 'off'}
 }, {
   files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   plugins: { js },
