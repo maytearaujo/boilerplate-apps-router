@@ -1,15 +1,20 @@
 name: ci
+
 on: [pull_request]
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
-build:
-  runs-on: ubuntu-latest
-  steps:
+  build:
+    runs-on: ubuntu-latest
+    steps:
     - name: Checkout Repository
-      uses: action/checkout@v5
+      uses: actions/checkout@v5
 
     - name: Setup Node
-      uses: action/checkout@v5
+      uses: actions/setup-node@v5
       with:
         node-version: '22.x'
         cache: 'npm'
@@ -21,7 +26,7 @@ build:
       run: npm run lint
       
     - name: Testing
-      run: npm run Testin
+      run: npm run test
 
     - name: build
       run: npm run build
