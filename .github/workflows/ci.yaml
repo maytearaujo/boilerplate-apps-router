@@ -1,0 +1,28 @@
+name: ci
+on: [pull_request]
+
+jobs:
+build:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout Repository
+      uses: action/checkout@v5
+
+    - name: Setup Node
+      uses: action/checkout@v5
+      with:
+        node-version: '22.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Linting
+      run: npm run lint
+      
+    - name: Testing
+      run: npm run Testin
+
+    - name: build
+      run: npm run build
+
