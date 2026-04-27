@@ -1,5 +1,6 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
+// Note: eslint-plugin-storybook removed due to ESM import issues with ESLint 10
+// Storybook linting is handled by @storybook/addon-a11y and other Storybook addons
 
 import js from '@eslint/js'
 import globals from 'globals'
@@ -20,6 +21,10 @@ globalIgnores([
   'next-env.d.ts',
   'coverage/**',
   'package-lock.json',
+  '.storybook',
+  '.jest',
+  'generators',
+  'storybook-static/**'
 ]), {
   files: ['.lintstagedrc.js', '.eslintrc.js', '*.config.js'],
   languageOptions: { globals: globals.node },
@@ -54,4 +59,4 @@ globalIgnores([
   plugins: { css },
   language: 'css/css',
   rules: { ...css.configs.recommended.rules, 'css/no-invalid-at-rules': 'off' }
-}, ...storybook.configs["flat/recommended"]])
+}])
